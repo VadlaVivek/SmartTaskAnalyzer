@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: smart-task-analyzer-backend
+    name: smarttask-backend
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "gunicorn backend.wsgi:application"
+    plan: free
     envVars:
       - key: PYTHON_VERSION
         value: 3.10
