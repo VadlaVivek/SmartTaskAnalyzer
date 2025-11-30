@@ -125,9 +125,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-INSTALLED_APPS += [
-    'corsheaders',
-]
 
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 
