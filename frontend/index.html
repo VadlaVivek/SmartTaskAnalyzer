@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Task Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Smart Task Analyzer</h1>
+
+<div class="container">
+
+    <div class="left">
+        <h2>Enter Tasks (JSON)</h2>
+
+        <textarea id="taskInput" placeholder='[
+  {"title":"Fix bug","due_date":"2025-11-30","estimated_hours":3,"importance":8,"dependencies":[]}
+]' ></textarea>
+
+        <label>Strategy:</label>
+        <select id="strategy">
+            <option value="smart">Smart Balance</option>
+            <option value="fastest">Fastest Wins</option>
+            <option value="impact">High Impact</option>
+            <option value="deadline">Deadline Driven</option>
+        </select>
+
+        <button onclick="analyzeTasks()">Analyze Tasks</button>
+    </div>
+
+    <div class="right">
+        <h2>Results</h2>
+        <div id="results"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
