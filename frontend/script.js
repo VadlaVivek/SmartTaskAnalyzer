@@ -5,7 +5,7 @@ async function analyzeTasks() {
     try {
         let tasks = JSON.parse(tasksRaw.trim());   // <-- IMPORTANT: trim()
 
-        let response = await fetch("http://127.0.0.1:8000/api/tasks/analyze/", {
+        let response = await fetch("https://smarttaskanalyzer-ka53.onrender.com", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ tasks, strategy })
