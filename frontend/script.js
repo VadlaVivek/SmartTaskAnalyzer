@@ -14,9 +14,9 @@ async function analyzeTasks() {
         let data = await response.json();
         displayResults(data);
 
-    } catch (err) {
-        console.error("JSON Parse Error:", err);
-        alert("Invalid JSON input! Check formatting.");
+    } catch (error) {
+    console.error("Actual Error:", error);
+    alert("Network error: Could not reach API");
     }
 }
 
